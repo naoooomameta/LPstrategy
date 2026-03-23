@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>プラトン｜偏差値UPロードマップ無料診断</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=M+PLUS+Rounded+1c:wght@400;700;800;900&display=swap" rel="stylesheet">
+<style>
+/* ═══════════════════════════════════════
+   RESET & BASE
+   ═══════════════════════════════════════ */
+*{margin:0;padding:0;box-sizing:border-box;}
+html{font-size:16px;scroll-behavior:smooth;}
+body{
+  font-family:'M PLUS Rounded 1c','Noto Sans JP',sans-serif;
+  background:#f0f6ff;
+  color:#1a1a2e;
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+  -webkit-tap-highlight-color:transparent;
+}
+
+/* ═══════════════════════════════════════
+   SECTION 1 — FV (Cyteki-style)
+   ═══════════════════════════════════════ */
+
+/* Top Banner */
+.top-banner{
+  background:linear-gradient(90deg,#1a56db 0%,#2b6cb0 100%);
+  color:#fff;
+  text-align:center;
+  padding:10px 16px;
+  font-size:13px;
+  font-weight:700;
+  letter-spacing:0.5px;
+  position:relative;
+}
+.top-banner::after{
+  content:'';position:absolute;bottom:-6px;left:50%;
+  transform:translateX(-50%);
+  width:0;height:0;
+  border-left:8px solid transparent;border-right:8px solid transparent;
+  border-top:6px solid #1a56db;
+}
+
+/* Tags */
+.tag-row{
+  display:flex;justify-content:center;flex-wrap:wrap;gap:6px;
+  padding:18px 16px 8px;background:#fff;
+}
+.tag{
+  padding:5px 14px;font-size:11px;font-weight:700;
+  color:#1a56db;border:2px solid #1a56db;border-radius:4px;
+  background:#fff;letter-spacing:0.5px;
+}
+
+/* Hero FV */
+.hero-fv{
+  background:#fff;text-align:center;padding:24px 20px 0;
+  position:relative;overflow:hidden;
+}
+.hex-bg{position:absolute;top:-20px;right:-30px;width:200px;height:200px;opacity:0.06;}
+.hex-bg2{position:absolute;top:180px;left:-40px;width:160px;height:160px;opacity:0.04;transform:rotate(30deg);}
+
+.impact-area{position:relative;margin-bottom:8px;}
+.circle-arrow{
+  position:absolute;top:50%;left:50%;
+  transform:translate(-50%,-50%);width:200px;height:200px;
+  animation:spin 8s linear infinite;pointer-events:none;z-index:0;
+}
+@keyframes spin{from{transform:translate(-50%,-50%) rotate(0deg);}to{transform:translate(-50%,-50%) rotate(360deg);}}
+
+.impact-number{position:relative;z-index:1;display:inline-block;}
+.impact-prefix{font-size:22px;font-weight:900;color:#1a56db;display:block;margin-bottom:-10px;letter-spacing:1px;}
+.impact-big{
+  font-size:120px;font-weight:900;line-height:1;color:#1a56db;
+  letter-spacing:-4px;display:inline-block;
+  text-shadow:3px 3px 0 rgba(26,86,219,0.1);
+  animation:numberPop 0.6s cubic-bezier(0.34,1.56,0.64,1) both;
+}
+@keyframes numberPop{0%{transform:scale(0.3);opacity:0;}100%{transform:scale(1);opacity:1;}}
+
+.impact-sub{
+  font-size:48px;font-weight:900;color:#1a1a2e;line-height:1.1;
+  display:block;margin-top:-8px;
+}
+.impact-sub .em{
+  color:#1a56db;font-size:56px;position:relative;
+}
+.impact-sub .em::after{
+  content:'';position:absolute;bottom:2px;left:-4px;right:-4px;
+  height:6px;background:linear-gradient(90deg,#fbbf24,#f59e0b);
+  border-radius:3px;z-index:-1;
+}
+
+/* Sparks */
+.spark{position:absolute;z-index:2;}
+.spark1{top:10px;right:20px;width:40px;animation:sparkle 2s ease-in-out infinite;}
+.spark2{top:60px;left:15px;width:30px;animation:sparkle 2s ease-in-out infinite 0.5s;}
+.spark3{bottom:30px;right:10px;width:35px;animation:sparkle 2s ease-in-out infinite 1s;}
+@keyframes sparkle{0%,100%{opacity:0.4;transform:scale(0.8) rotate(0deg);}50%{opacity:1;transform:scale(1.2) rotate(15deg);}}
+
+/* Visual Area */
+.visual-area{position:relative;margin:20px auto 0;max-width:320px;}
+.pain-badge{
+  position:absolute;top:10px;left:-10px;z-index:3;
+  background:linear-gradient(135deg,#1a56db,#2b6cb0);color:#fff;
+  padding:10px 16px;border-radius:12px;font-size:15px;font-weight:900;
+  line-height:1.4;box-shadow:0 4px 15px rgba(26,86,219,0.3);
+  transform:rotate(-3deg);animation:badgeFloat 3s ease-in-out infinite;
+}
+@keyframes badgeFloat{0%,100%{transform:rotate(-3deg) translateY(0);}50%{transform:rotate(-3deg) translateY(-5px);}}
+
+.monitor-wrap{position:relative;width:260px;margin:0 auto;}
+.monitor{
+  width:100%;background:linear-gradient(135deg,#eef2ff,#dbeafe);
+  border:3px solid #93c5fd;border-radius:16px;padding:16px;
+  position:relative;box-shadow:0 8px 30px rgba(26,86,219,0.12);
+}
+.monitor-screen{background:#fff;border-radius:10px;padding:14px;position:relative;}
+.mini-chart{display:flex;align-items:flex-end;gap:6px;height:80px;margin-bottom:8px;}
+.mini-bar{flex:1;border-radius:4px 4px 0 0;animation:barGrow 1s ease-out both;}
+@keyframes barGrow{from{height:0 !important;}}
+.mini-bar:nth-child(1){background:#93c5fd;height:25%;}
+.mini-bar:nth-child(2){background:#60a5fa;height:35%;}
+.mini-bar:nth-child(3){background:#3b82f6;height:45%;}
+.mini-bar:nth-child(4){background:#2563eb;height:58%;}
+.mini-bar:nth-child(5){background:#1d4ed8;height:72%;}
+.mini-bar:nth-child(6){background:linear-gradient(180deg,#f59e0b,#fbbf24);height:100%;position:relative;border:2px solid #f59e0b;}
+.mini-bar:nth-child(6)::after{content:'🎯';position:absolute;top:-22px;left:50%;transform:translateX(-50%);font-size:14px;}
+.mini-label{display:flex;justify-content:space-between;font-size:9px;color:#94a3b8;font-weight:700;}
+.monitor-stand{width:60px;height:12px;background:#93c5fd;margin:8px auto 0;border-radius:0 0 8px 8px;}
+
+/* Mascot */
+.mascot{position:absolute;bottom:-10px;right:-30px;z-index:4;width:120px;animation:mascotBounce 3s ease-in-out infinite;}
+@keyframes mascotBounce{0%,100%{transform:translateY(0);}50%{transform:translateY(-8px);}}
+
+/* Omakase */
+.omakase-area{background:#fff;text-align:center;padding:20px 20px 28px;}
+.omakase-brand{font-size:20px;font-weight:700;color:#64748b;margin-bottom:-4px;}
+.omakase-brand em{font-style:normal;color:#1a56db;font-weight:900;font-size:24px;}
+.omakase-main{font-size:38px;font-weight:900;color:#1a1a2e;line-height:1.3;margin:4px 0;letter-spacing:-1px;}
+.omakase-main .blue{color:#1a56db;}
+.omakase-main .gold-underline{position:relative;display:inline-block;}
+.omakase-main .gold-underline::after{
+  content:'';position:absolute;bottom:2px;left:-4px;right:-4px;
+  height:10px;background:linear-gradient(90deg,rgba(251,191,36,0.4),rgba(245,158,11,0.4));
+  border-radius:5px;z-index:-1;
+}
+
+/* ═══════════════════════════════════════
+   FV → SURVEY BRIDGE
+   ═══════════════════════════════════════ */
+.bridge-section{
+  background:linear-gradient(180deg,#fff 0%,#eef2ff 50%,#dbeafe 100%);
+  text-align:center;
+  padding:32px 20px 40px;
+}
+.bridge-heading{
+  font-size:20px;font-weight:900;color:#1a1a2e;
+  line-height:1.5;margin-bottom:8px;
+}
+.bridge-heading .blue{color:#1a56db;}
+.bridge-heading .num{
+  font-size:32px;color:#1a56db;
+  position:relative;display:inline-block;
+}
+.bridge-heading .num::after{
+  content:'';position:absolute;bottom:0;left:-2px;right:-2px;
+  height:4px;background:#fbbf24;border-radius:2px;
+}
+.bridge-sub{font-size:13px;color:#64748b;margin-bottom:24px;line-height:1.7;}
+.bridge-steps{
+  display:flex;align-items:center;justify-content:center;gap:4px;
+  margin-bottom:24px;
+}
+.bridge-step{
+  display:flex;flex-direction:column;align-items:center;gap:4px;
+  width:80px;
+}
+.bridge-step-icon{
+  width:48px;height:48px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-size:20px;font-weight:900;
+}
+.bridge-step-icon.active{background:#1a56db;color:#fff;}
+.bridge-step-icon.muted{background:#e2e8f0;color:#94a3b8;}
+.bridge-step-label{font-size:10px;font-weight:700;color:#64748b;line-height:1.3;text-align:center;}
+.bridge-arrow{color:#cbd5e1;font-size:18px;margin-top:-16px;}
+
+.start-btn{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:18px 48px;font-size:18px;font-weight:900;
+  color:#fff;background:linear-gradient(135deg,#1a56db,#2563eb);
+  border:none;border-radius:100px;cursor:pointer;
+  box-shadow:0 6px 25px rgba(26,86,219,0.35);
+  transition:all 0.2s;font-family:inherit;
+  animation:btnPulse 2s ease-in-out infinite;
+}
+.start-btn:hover{transform:translateY(-2px);box-shadow:0 10px 35px rgba(26,86,219,0.45);}
+@keyframes btnPulse{0%,100%{box-shadow:0 6px 25px rgba(26,86,219,0.35);}50%{box-shadow:0 6px 35px rgba(26,86,219,0.55);}}
+.start-btn::after{
+  content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,0.25),transparent);
+  animation:shine 3s infinite;
+}
+@keyframes shine{0%{left:-100%;}30%{left:100%;}100%{left:100%;}}
+
+/* ═══════════════════════════════════════
+   SECTION 2 — SURVEY
+   ═══════════════════════════════════════ */
+.survey-overlay{
+  display:none;
+  position:fixed;inset:0;z-index:1000;
+  background:rgba(15,23,42,0.6);
+  backdrop-filter:blur(8px);
+  -webkit-backdrop-filter:blur(8px);
+  animation:fadeIn 0.3s ease;
+}
+.survey-overlay.show{display:flex;align-items:center;justify-content:center;}
+@keyframes fadeIn{from{opacity:0;}to{opacity:1;}}
+
+.survey-container{
+  width:100%;max-width:420px;height:100dvh;max-height:700px;
+  background:#fff;border-radius:24px;
+  display:flex;flex-direction:column;
+  overflow:hidden;
+  box-shadow:0 20px 60px rgba(0,0,0,0.2);
+  position:relative;
+}
+@media(max-width:500px){
+  .survey-container{
+    max-width:100%;height:100dvh;max-height:none;border-radius:0;
+  }
+}
+
+/* Survey Header */
+.survey-header{
+  padding:20px 20px 16px;
+  background:#fff;
+  border-bottom:1px solid #f1f5f9;
+  flex-shrink:0;
+}
+.survey-progress{
+  display:flex;align-items:center;gap:12px;margin-bottom:12px;
+}
+.progress-bar{
+  flex:1;height:6px;background:#e2e8f0;border-radius:100px;overflow:hidden;
+}
+.progress-fill{
+  height:100%;background:linear-gradient(90deg,#1a56db,#60a5fa);
+  border-radius:100px;transition:width 0.5s cubic-bezier(0.4,0,0.2,1);
+}
+.progress-text{font-size:12px;font-weight:700;color:#1a56db;white-space:nowrap;}
+.survey-step-title{
+  font-size:11px;font-weight:700;color:#94a3b8;letter-spacing:2px;
+}
+
+/* Survey Body */
+.survey-body{
+  flex:1;overflow-y:auto;padding:24px 20px;
+  -webkit-overflow-scrolling:touch;
+}
+.survey-question{
+  display:none;
+  animation:slideUp 0.4s cubic-bezier(0.4,0,0.2,1) both;
+}
+.survey-question.active{display:block;}
+@keyframes slideUp{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
+
+.q-icon{font-size:40px;margin-bottom:12px;display:block;}
+.q-title{font-size:22px;font-weight:900;color:#1a1a2e;line-height:1.4;margin-bottom:6px;}
+.q-desc{font-size:13px;color:#94a3b8;margin-bottom:24px;line-height:1.6;}
+
+/* Option Cards */
+.option-grid{display:flex;flex-direction:column;gap:10px;}
+.option-card{
+  display:flex;align-items:center;gap:14px;
+  padding:16px 18px;border:2px solid #e2e8f0;border-radius:14px;
+  cursor:pointer;transition:all 0.2s;background:#fff;
+  -webkit-user-select:none;user-select:none;
+}
+.option-card:hover{border-color:#93c5fd;background:#f8faff;}
+.option-card:active{transform:scale(0.98);}
+.option-card.selected{
+  border-color:#1a56db;background:#eef2ff;
+  box-shadow:0 0 0 3px rgba(26,86,219,0.12);
+}
+.option-radio{
+  width:22px;height:22px;border-radius:50%;
+  border:2.5px solid #cbd5e1;flex-shrink:0;
+  display:flex;align-items:center;justify-content:center;
+  transition:all 0.2s;
+}
+.option-card.selected .option-radio{
+  border-color:#1a56db;background:#1a56db;
+}
+.option-card.selected .option-radio::after{
+  content:'';width:8px;height:8px;border-radius:50%;background:#fff;
+}
+.option-label{font-size:15px;font-weight:700;color:#1a1a2e;}
+.option-sub{font-size:11px;color:#94a3b8;font-weight:500;}
+.option-emoji{font-size:24px;flex-shrink:0;}
+
+/* Checkbox variant for multi-select */
+.option-card.multi .option-radio{border-radius:6px;}
+.option-card.multi.selected .option-radio{border-radius:6px;}
+.option-card.multi.selected .option-radio::after{
+  content:'✓';width:auto;height:auto;background:none;
+  color:#fff;font-size:12px;font-weight:900;border-radius:0;
+}
+
+/* Number input */
+.number-input-wrap{
+  display:flex;align-items:center;gap:12px;
+  justify-content:center;margin:20px 0;
+}
+.number-input{
+  width:120px;padding:16px;font-size:36px;font-weight:900;
+  text-align:center;border:3px solid #e2e8f0;border-radius:16px;
+  font-family:inherit;color:#1a56db;
+  transition:border-color 0.2s;background:#f8fafc;
+}
+.number-input:focus{outline:none;border-color:#1a56db;background:#fff;}
+.number-input::placeholder{color:#cbd5e1;font-size:24px;}
+.number-unit{font-size:18px;font-weight:900;color:#64748b;}
+
+/* Survey Footer */
+.survey-footer{
+  padding:16px 20px 24px;
+  border-top:1px solid #f1f5f9;
+  flex-shrink:0;
+  display:flex;gap:10px;
+}
+.survey-btn{
+  flex:1;padding:16px;font-size:16px;font-weight:900;
+  border:none;border-radius:14px;cursor:pointer;
+  font-family:inherit;transition:all 0.2s;
+}
+.survey-btn.back{
+  background:#f1f5f9;color:#64748b;flex:0 0 auto;width:56px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:20px;padding:0;
+}
+.survey-btn.back:hover{background:#e2e8f0;}
+.survey-btn.next{
+  background:linear-gradient(135deg,#1a56db,#2563eb);color:#fff;
+  box-shadow:0 4px 15px rgba(26,86,219,0.3);
+}
+.survey-btn.next:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(26,86,219,0.4);}
+.survey-btn.next:disabled{
+  background:#e2e8f0;color:#94a3b8;
+  box-shadow:none;cursor:not-allowed;transform:none;
+}
+
+/* ═══════════════════════════════════════
+   SECTION 3 — COMPLETE SCREEN
+   ═══════════════════════════════════════ */
+.complete-screen{
+  display:none;
+  text-align:center;
+  padding:40px 24px;
+  flex:1;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+}
+.complete-screen.show{display:flex;}
+
+.complete-check{
+  width:80px;height:80px;border-radius:50%;
+  background:linear-gradient(135deg,#10b981,#34d399);
+  display:flex;align-items:center;justify-content:center;
+  margin:0 auto 20px;
+  box-shadow:0 8px 30px rgba(16,185,129,0.3);
+  animation:checkPop 0.5s cubic-bezier(0.34,1.56,0.64,1) both;
+}
+@keyframes checkPop{0%{transform:scale(0);opacity:0;}100%{transform:scale(1);opacity:1;}}
+.complete-check svg{width:36px;height:36px;}
+
+.complete-title{
+  font-size:24px;font-weight:900;color:#1a1a2e;
+  margin-bottom:8px;line-height:1.4;
+}
+.complete-sub{
+  font-size:14px;color:#64748b;line-height:1.7;
+  margin-bottom:28px;max-width:300px;margin-left:auto;margin-right:auto;
+}
+
+/* Summary card */
+.summary-card{
+  background:#f8fafc;border:1.5px solid #e2e8f0;
+  border-radius:16px;padding:20px;
+  text-align:left;width:100%;max-width:340px;
+  margin:0 auto 28px;
+}
+.summary-row{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:8px 0;border-bottom:1px solid #f1f5f9;
+}
+.summary-row:last-child{border-bottom:none;}
+.summary-label{font-size:12px;color:#94a3b8;font-weight:700;}
+.summary-value{font-size:14px;color:#1a1a2e;font-weight:700;}
+
+/* LINE CTA */
+.line-cta-box{
+  background:linear-gradient(135deg,#06c755,#00b648);
+  border-radius:20px;padding:24px 20px;
+  width:100%;max-width:340px;margin:0 auto;
+  box-shadow:0 8px 30px rgba(6,199,85,0.3);
+}
+.line-cta-box .line-icon{
+  width:56px;height:56px;border-radius:14px;
+  background:#fff;display:flex;align-items:center;justify-content:center;
+  margin:0 auto 12px;
+  box-shadow:0 4px 12px rgba(0,0,0,0.1);
+}
+.line-cta-title{
+  font-size:18px;font-weight:900;color:#fff;
+  margin-bottom:4px;line-height:1.4;
+}
+.line-cta-desc{
+  font-size:12px;color:rgba(255,255,255,0.8);
+  margin-bottom:16px;line-height:1.6;
+}
+.line-cta-highlight{
+  display:inline-block;background:rgba(255,255,255,0.2);
+  border-radius:8px;padding:6px 14px;
+  font-size:13px;font-weight:700;color:#fff;
+  margin-bottom:16px;
+}
+.line-add-btn{
+  display:block;width:100%;padding:16px;
+  font-size:17px;font-weight:900;
+  color:#06c755;background:#fff;
+  border:none;border-radius:14px;cursor:pointer;
+  font-family:inherit;
+  box-shadow:0 4px 15px rgba(0,0,0,0.1);
+  transition:all 0.2s;
+}
+.line-add-btn:hover{transform:translateY(-2px);box-shadow:0 8px 25px rgba(0,0,0,0.15);}
+
+/* Confetti canvas */
+#confetti{
+  position:fixed;inset:0;z-index:1001;pointer-events:none;
+}
+
+/* ═══════════════════════════════════════
+   RESPONSIVE DESKTOP PHONE FRAME
+   ═══════════════════════════════════════ */
+@media(min-width:600px){
+  body{
+    display:flex;justify-content:center;align-items:flex-start;
+    min-height:100vh;
+    background:linear-gradient(135deg,#e0e7ff,#dbeafe);
+    padding:40px 20px;
+  }
+  .phone-frame{
+    width:390px;border-radius:40px;overflow:hidden;
+    box-shadow:0 20px 80px rgba(0,0,0,0.2),inset 0 0 0 8px #1a1a2e;
+    background:#1a1a2e;padding:12px;position:relative;
+  }
+  .phone-frame::before{
+    content:'';position:absolute;top:12px;left:50%;
+    transform:translateX(-50%);width:120px;height:28px;
+    background:#1a1a2e;border-radius:0 0 16px 16px;z-index:100;
+  }
+  .phone-inner{border-radius:32px;overflow:hidden;overflow-y:auto;max-height:85vh;}
+}
+@media(max-width:599px){
+  .phone-frame{width:100%;}
+  .phone-inner{width:100%;}
+}
+</style>
+</head>
+<body>
+
+<div class="phone-frame">
+<div class="phone-inner">
+
+<!-- ════════════════════════════════════════
+     FV — First View
+     ════════════════════════════════════════ -->
+<div class="top-banner">お子様の志望校合格を本気で目指す保護者様へ</div>
+
+<div class="tag-row">
+  <span class="tag">偏差値診断</span>
+  <span class="tag">戦略設計</span>
+  <span class="tag">個別指導</span>
+  <span class="tag">進捗管理</span>
+  <span class="tag">合格実績</span>
+</div>
+
+<div class="hero-fv">
+  <svg class="hex-bg" viewBox="0 0 200 200"><polygon points="100,10 180,55 180,145 100,190 20,145 20,55" fill="#1a56db"/><polygon points="100,40 155,70 155,130 100,160 45,130 45,70" fill="none" stroke="#1a56db" stroke-width="2"/></svg>
+  <svg class="hex-bg2" viewBox="0 0 200 200"><polygon points="100,10 180,55 180,145 100,190 20,145 20,55" fill="#1a56db"/></svg>
+  <svg class="spark spark1" viewBox="0 0 40 40"><path d="M20 2 L23 16 L38 20 L23 24 L20 38 L17 24 L2 20 L17 16 Z" fill="#fbbf24"/></svg>
+  <svg class="spark spark2" viewBox="0 0 40 40"><path d="M20 5 L22 16 L33 20 L22 24 L20 35 L18 24 L7 20 L18 16 Z" fill="#f59e0b"/></svg>
+  <svg class="spark spark3" viewBox="0 0 40 40"><path d="M20 2 L23 16 L38 20 L23 24 L20 38 L17 24 L2 20 L17 16 Z" fill="#fbbf24"/></svg>
+
+  <div class="impact-area">
+    <svg class="circle-arrow" viewBox="0 0 200 200"><defs><marker id="ah" markerWidth="8" markerHeight="6" refX="4" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#f59e0b"/></marker></defs><path d="M 100 15 A 85 85 0 1 1 60 25" fill="none" stroke="#f59e0b" stroke-width="4" stroke-linecap="round" marker-end="url(#ah)"/></svg>
+    <div class="impact-number">
+      <span class="impact-prefix">偏差値</span>
+      <span class="impact-big">+12</span>
+    </div>
+  </div>
+  <div class="impact-sub">勝手に<span class="em">伸びる</span></div>
+
+  <div class="visual-area">
+    <div class="pain-badge">受験勉強の<br>お悩み</div>
+    <div class="monitor-wrap">
+      <div class="monitor">
+        <div class="monitor-screen">
+          <div class="mini-chart">
+            <div class="mini-bar" style="height:25%;animation-delay:0.1s"></div>
+            <div class="mini-bar" style="height:35%;animation-delay:0.2s"></div>
+            <div class="mini-bar" style="height:45%;animation-delay:0.3s"></div>
+            <div class="mini-bar" style="height:58%;animation-delay:0.4s"></div>
+            <div class="mini-bar" style="height:72%;animation-delay:0.5s"></div>
+            <div class="mini-bar" style="height:100%;animation-delay:0.6s"></div>
+          </div>
+          <div class="mini-label"><span>4月</span><span>6月</span><span>8月</span><span>10月</span><span>12月</span><span>合格!</span></div>
+        </div>
+      </div>
+      <div class="monitor-stand"></div>
+    </div>
+    <svg class="mascot" viewBox="0 0 120 140">
+      <rect x="25" y="50" width="70" height="60" rx="18" fill="#e0e7ff" stroke="#3b82f6" stroke-width="2.5"/>
+      <rect x="30" y="10" width="60" height="45" rx="14" fill="#fff" stroke="#3b82f6" stroke-width="2.5"/>
+      <ellipse cx="48" cy="30" rx="6" ry="7" fill="#1a56db"/><ellipse cx="72" cy="30" rx="6" ry="7" fill="#1a56db"/>
+      <ellipse cx="50" cy="28" rx="2" ry="2.5" fill="#fff"/><ellipse cx="74" cy="28" rx="2" ry="2.5" fill="#fff"/>
+      <path d="M48 40 Q60 48 72 40" fill="none" stroke="#1a56db" stroke-width="2" stroke-linecap="round"/>
+      <line x1="60" y1="10" x2="60" y2="0" stroke="#3b82f6" stroke-width="2.5"/><circle cx="60" cy="0" r="4" fill="#f59e0b"/>
+      <rect x="8" y="58" width="20" height="12" rx="6" fill="#e0e7ff" stroke="#3b82f6" stroke-width="2"/>
+      <rect x="92" y="58" width="20" height="12" rx="6" fill="#e0e7ff" stroke="#3b82f6" stroke-width="2"/>
+      <rect x="38" y="108" width="16" height="18" rx="6" fill="#e0e7ff" stroke="#3b82f6" stroke-width="2"/>
+      <rect x="66" y="108" width="16" height="18" rx="6" fill="#e0e7ff" stroke="#3b82f6" stroke-width="2"/>
+      <rect x="4" y="54" width="18" height="22" rx="2" fill="#fbbf24" stroke="#d97706" stroke-width="1.5" transform="rotate(-12 13 65)"/>
+      <line x1="7" y1="60" x2="18" y2="57" stroke="#d97706" stroke-width="1"/><line x1="7" y1="64" x2="18" y2="61" stroke="#d97706" stroke-width="1"/>
+      <polygon points="60,4 45,12 60,10 75,12" fill="#1a56db"/>
+    </svg>
+  </div>
+</div>
+
+<div class="omakase-area">
+  <div class="omakase-brand"><em>プラトン</em>の戦略システムに</div>
+  <div class="omakase-main"><span class="gold-underline">まるっと</span>おまかせ<span class="blue">！</span></div>
+</div>
+
+<!-- ════════════════════════════════════════
+     BRIDGE — FV → アンケート誘導
+     ════════════════════════════════════════ -->
+<div class="bridge-section" id="bridge">
+  <div class="bridge-heading">
+    たった<span class="num">4</span>問に答えるだけで<br>
+    <span class="blue">合格ロードマップ</span>を<br>
+    無料でお届け🎁
+  </div>
+  <div class="bridge-sub">
+    お子様の現状に合わせた偏差値UPの戦略を<br>
+    プロが設計してLINEでお届けします。
+  </div>
+
+  <div class="bridge-steps">
+    <div class="bridge-step">
+      <div class="bridge-step-icon active">📝</div>
+      <div class="bridge-step-label">4問に回答<br><small style="color:#1a56db;">約30秒</small></div>
+    </div>
+    <div class="bridge-arrow">→</div>
+    <div class="bridge-step">
+      <div class="bridge-step-icon active">💬</div>
+      <div class="bridge-step-label">LINEを<br>友だち追加</div>
+    </div>
+    <div class="bridge-arrow">→</div>
+    <div class="bridge-step">
+      <div class="bridge-step-icon active">📊</div>
+      <div class="bridge-step-label">2日以内に<br><small style="color:#1a56db;">ロードマップ到着</small></div>
+    </div>
+  </div>
+
+  <button class="start-btn" onclick="openSurvey()">
+    無料診断をはじめる →
+  </button>
+</div>
+
+</div><!-- /phone-inner -->
+</div><!-- /phone-frame -->
+
+
+<!-- ════════════════════════════════════════
+     SURVEY OVERLAY (Full-screen modal)
+     ════════════════════════════════════════ -->
+<div class="survey-overlay" id="surveyOverlay">
+<div class="survey-container" id="surveyContainer">
+
+  <!-- Header -->
+  <div class="survey-header">
+    <div class="survey-progress">
+      <div class="progress-bar"><div class="progress-fill" id="progressFill" style="width:0%"></div></div>
+      <div class="progress-text" id="progressText">0 / 4</div>
+    </div>
+    <div class="survey-step-title" id="stepLabel">STEP 1</div>
+  </div>
+
+  <!-- Body — Questions -->
+  <div class="survey-body" id="surveyBody">
+
+    <!-- Q1: 学年 -->
+    <div class="survey-question active" data-step="1">
+      <span class="q-icon">🎒</span>
+      <div class="q-title">お子様の学年を<br>教えてください</div>
+      <div class="q-desc">現在の学年を選択してください</div>
+      <div class="option-grid" data-name="grade">
+        <div class="option-card" data-value="中1" onclick="selectOption(this)">
+          <div class="option-radio"></div>
+          <div><div class="option-label">中学1年生</div></div>
+        </div>
+        <div class="option-card" data-value="中2" onclick="selectOption(this)">
+          <div class="option-radio"></div>
+          <div><div class="option-label">中学2年生</div></div>
+        </div>
+        <div class="option-card" data-value="中3" onclick="selectOption(this)">
+          <div class="option-radio"></div>
+          <div><div class="option-label">中学3年生</div></div>
+        </div>
+        <div class="option-card" data-value="高1" onclick="selectOption(this)">
+          <div class="option-radio"></div>
+          <div><div class="option-label">高校1年生</div></div>
+        </div>
+        <div class="option-card" data-value="高2" onclick="selectOption(this)">
+          <div class="option-radio"></div>
+          <div><div class="option-label">高校2年生</div></div>
+        </div>
+        <div class="option-card" data-value="高3" onclick="selectOption(this)">
+          <div class="option-radio"></div>
+          <div><div class="option-label">高校3年生</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Q2: 志望校 -->
+    <div class="survey-question" data-step="2">
+      <span class="q-icon">🏫</span>
+      <div class="q-title">志望校のレベルを<br>教えてください</div>
+      <div class="q-desc">現時点の志望校に最も近いものを選択</div>
+      <div class="option-grid" data-name="target">
+        <div class="option-card" data-value="東大・京大・旧帝大" onclick="selectOption(this)">
+          <div class="option-radio"></div>
+          <div>
+            <div class="option-label">東大・京大・旧帝大クラス</div>
+            <div class="option-sub">偏差値67.5〜</div>
+          </div>
+          <div class="option-emoji">🔥</div>
+        </div>
+        <div class="option-card" data-value="早慶上理" onclick="selectOption(this)">
+          <div class="option-radio"></div>
+          <div>
+            <div class="option-label">早慶上理クラス</div>
+            <div class="option-sub">偏差値62.5〜67.5</div>
+          </div>
+          <div class="option-emoji">💪</div>
+        </div>
+        <div class="option-card" data-value="GMARCH" onclick="selectOption(this)">
+          <div class="option-radio"></div>
+          <div>
+            <div class="option-label">GMARCH・関関同立クラス</div>
+            <div class="option-sub">偏差値55〜62.5</div>
+          </div>
+          <div class="option-emoji">✨</div>
+        </div>
+        <div class="option-card" data-value="日東駒専" onclick="selectOption(this)">
+          <div class="option-radio"></div>
+          <div>
+            <div class="option-label">日東駒専・産近甲龍クラス</div>
+            <div class="option-sub">偏差値47.5〜55</div>
+          </div>
+          <div class="option-emoji">📘</div>
+        </div>
+        <div class="option-card" data-value="その他/高校受験" onclick="selectOption(this)">
+          <div class="option-radio"></div>
+          <div>
+            <div class="option-label">その他 / 高校受験</div>
+            <div class="option-sub">具体的な志望校がまだ未定でもOK</div>
+          </div>
+          <div class="option-emoji">🔍</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Q3: 現在の偏差値 -->
+    <div class="survey-question" data-step="3">
+      <span class="q-icon">📐</span>
+      <div class="q-title">現在の偏差値は<br>どれくらいですか？</div>
+      <div class="q-desc">直近の模試の偏差値をおおよそで構いません</div>
+      <div class="option-grid" data-name="deviation">
+        <div class="option-card" data-value="〜40" onclick="selectOption(this)">
+          <div class="option-radio"></div>
+          <div><div class="option-label">〜40（これから伸ばしたい）</div></div>
+        </div>
+        <div class="option-card" data-value="41〜50" onclick="selectOption(this)">
+          <div class="option-radio"></div>
+          <div><div class="option-label">41〜50（平均くらい）</div></div>
+        </div>
+        <div class="option-card" data-value="51〜58" onclick="selectOption(this)">
+          <div class="option-radio"></div>
+          <div><div class="option-label">51〜58（中堅レベル）</div></div>
+        </div>
+        <div class="option-card" data-value="59〜65" onclick="selectOption(this)">
+          <div class="option-radio"></div>
+          <div><div class="option-label">59〜65（上位層）</div></div>
+        </div>
+        <div class="option-card" data-value="66〜" onclick="selectOption(this)">
+          <div class="option-radio"></div>
+          <div><div class="option-label">66〜（難関レベル）</div></div>
+        </div>
+        <div class="option-card" data-value="わからない" onclick="selectOption(this)">
+          <div class="option-radio"></div>
+          <div><div class="option-label">わからない / 模試を受けていない</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Q4: 科目別の得意・苦手 -->
+    <div class="survey-question" data-step="4">
+      <span class="q-icon">📊</span>
+      <div class="q-title">苦手な科目はありますか？</div>
+      <div class="q-desc">当てはまるものをすべて選択してください（複数可）</div>
+      <div class="option-grid" data-name="subjects">
+        <div class="option-card multi" data-value="英語" onclick="toggleMulti(this)">
+          <div class="option-radio"></div>
+          <div><div class="option-label">英語</div></div>
+          <div class="option-emoji">🔤</div>
+        </div>
+        <div class="option-card multi" data-value="数学" onclick="toggleMulti(this)">
+          <div class="option-radio"></div>
+          <div><div class="option-label">数学</div></div>
+          <div class="option-emoji">📐</div>
+        </div>
+        <div class="option-card multi" data-value="国語" onclick="toggleMulti(this)">
+          <div class="option-radio"></div>
+          <div><div class="option-label">国語</div></div>
+          <div class="option-emoji">📖</div>
+        </div>
+        <div class="option-card multi" data-value="理科" onclick="toggleMulti(this)">
+          <div class="option-radio"></div>
+          <div><div class="option-label">理科（物理・化学・生物）</div></div>
+          <div class="option-emoji">🔬</div>
+        </div>
+        <div class="option-card multi" data-value="社会" onclick="toggleMulti(this)">
+          <div class="option-radio"></div>
+          <div><div class="option-label">社会（日本史・世界史・地理）</div></div>
+          <div class="option-emoji">🌍</div>
+        </div>
+        <div class="option-card multi" data-value="特になし" onclick="toggleMulti(this)">
+          <div class="option-radio"></div>
+          <div><div class="option-label">特になし / まんべんなく</div></div>
+          <div class="option-emoji">👌</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- COMPLETE SCREEN -->
+    <div class="complete-screen" id="completeScreen">
+      <div class="complete-check">
+        <svg viewBox="0 0 36 36" fill="none"><path d="M8 18l7 7 13-13" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <div class="complete-title">回答ありがとうございます！🎉</div>
+      <div class="complete-sub">
+        お子様専用の<strong>偏差値UPロードマップ</strong>を<br>
+        プロが作成いたします。
+      </div>
+
+      <div class="summary-card" id="summaryCard">
+        <div class="summary-row">
+          <span class="summary-label">学年</span>
+          <span class="summary-value" id="sumGrade">—</span>
+        </div>
+        <div class="summary-row">
+          <span class="summary-label">志望校レベル</span>
+          <span class="summary-value" id="sumTarget">—</span>
+        </div>
+        <div class="summary-row">
+          <span class="summary-label">現在の偏差値</span>
+          <span class="summary-value" id="sumDev">—</span>
+        </div>
+        <div class="summary-row">
+          <span class="summary-label">苦手科目</span>
+          <span class="summary-value" id="sumSubjects">—</span>
+        </div>
+      </div>
+
+      <div class="line-cta-box">
+        <div class="line-icon">
+          <svg width="32" height="32" viewBox="0 0 32 32"><path d="M16 3C8.82 3 3 7.95 3 13.97c0 4.58 3.56 8.56 8.87 9.88.34.08.81.24.93.55.1.28.07.72.03 1l-.15.9c-.05.28-.21 1.1.97.6s6.43-3.79 8.78-6.49h0C24.68 18.04 29 16.22 29 13.97 29 7.95 23.18 3 16 3z" fill="#06c755"/><path d="M13.3 11.6h-.73a.24.24 0 00-.24.24v4.55c0 .13.11.24.24.24h.73c.13 0 .24-.11.24-.24v-4.55a.24.24 0 00-.24-.24zm5.63 0h-.73a.24.24 0 00-.24.24v2.7l-2.07-2.83a.24.24 0 00-.2-.11h-.73a.24.24 0 00-.24.24v4.55c0 .13.11.24.24.24h.73c.13 0 .24-.11.24-.24v-2.7l2.07 2.84c.04.06.11.1.19.1h.73c.13 0 .24-.11.24-.24v-4.55a.24.24 0 00-.24-.24zm-7.96 3.81h-1.8v-3.57a.24.24 0 00-.24-.24h-.73a.24.24 0 00-.24.24v4.55c0 .07.03.13.07.17a.24.24 0 00.17.07h2.77c.13 0 .24-.11.24-.24v-.73a.24.24 0 00-.24-.24zm11.32-2.84a.24.24 0 00.24-.24v-.73a.24.24 0 00-.24-.24H19.5a.24.24 0 00-.17.07.24.24 0 00-.07.17v4.55c0 .07.03.13.07.17a.24.24 0 00.17.07h2.77c.13 0 .24-.11.24-.24v-.73a.24.24 0 00-.24-.24h-1.8v-.76h1.8c.13 0 .24-.11.24-.24v-.73a.24.24 0 00-.24-.24h-1.8v-.76h1.8z" fill="#fff"/></svg>
+        </div>
+        <div class="line-cta-title">LINE友だち追加で<br>ロードマップをお届け！</div>
+        <div class="line-cta-highlight">📩 2日以内にお届けします</div>
+        <div class="line-cta-desc">
+          友だち追加後、自動メッセージに従って<br>
+          「診断済み」とお送りください。
+        </div>
+        <button class="line-add-btn" onclick="openLine()">
+          LINEで受け取る 📲
+        </button>
+      </div>
+
+      <p style="font-size:11px;color:#94a3b8;margin-top:16px;line-height:1.6;">
+        ※ 無理な勧誘は一切ございません<br>
+        ※ ロードマップは完全無料です
+      </p>
+    </div>
+
+  </div><!-- /survey-body -->
+
+  <!-- Footer -->
+  <div class="survey-footer" id="surveyFooter">
+    <button class="survey-btn back" id="backBtn" onclick="prevStep()" style="display:none;">←</button>
+    <button class="survey-btn next" id="nextBtn" onclick="nextStep()" disabled>次へ →</button>
+  </div>
+
+</div><!-- /survey-container -->
+</div><!-- /survey-overlay -->
+
+<canvas id="confetti"></canvas>
+
+<script>
+/* ═══════════════════════════════════════
+   SURVEY LOGIC
+   ═══════════════════════════════════════ */
+const TOTAL_STEPS = 4;
+let currentStep = 1;
+const answers = {};
+
+function openSurvey() {
+  document.getElementById('surveyOverlay').classList.add('show');
+  document.body.style.overflow = 'hidden';
+  updateUI();
+}
+
+function selectOption(card) {
+  const grid = card.closest('.option-grid');
+  grid.querySelectorAll('.option-card').forEach(c => c.classList.remove('selected'));
+  card.classList.add('selected');
+
+  const name = grid.dataset.name;
+  answers[name] = card.dataset.value;
+
+  document.getElementById('nextBtn').disabled = false;
+
+  // Auto-advance after short delay for better UX
+  setTimeout(() => {
+    if (currentStep < TOTAL_STEPS) {
+      nextStep();
+    }
+  }, 350);
+}
+
+function toggleMulti(card) {
+  // If "特になし" is selected, deselect others
+  if (card.dataset.value === '特になし') {
+    card.closest('.option-grid').querySelectorAll('.option-card').forEach(c => {
+      if (c !== card) c.classList.remove('selected');
+    });
+  } else {
+    // Deselect "特になし" if another is chosen
+    card.closest('.option-grid').querySelectorAll('.option-card').forEach(c => {
+      if (c.dataset.value === '特になし') c.classList.remove('selected');
+    });
+  }
+
+  card.classList.toggle('selected');
+
+  const grid = card.closest('.option-grid');
+  const selected = grid.querySelectorAll('.option-card.selected');
+  const vals = Array.from(selected).map(c => c.dataset.value);
+  answers[grid.dataset.name] = vals;
+
+  document.getElementById('nextBtn').disabled = vals.length === 0;
+}
+
+function nextStep() {
+  if (currentStep >= TOTAL_STEPS) {
+    showComplete();
+    return;
+  }
+  currentStep++;
+  updateUI();
+}
+
+function prevStep() {
+  if (currentStep <= 1) return;
+  currentStep--;
+  updateUI();
+}
+
+function updateUI() {
+  // Show/hide questions
+  document.querySelectorAll('.survey-question').forEach(q => {
+    q.classList.remove('active');
+    if (parseInt(q.dataset.step) === currentStep) {
+      q.classList.add('active');
+    }
+  });
+
+  // Progress
+  const pct = ((currentStep - 1) / TOTAL_STEPS) * 100;
+  document.getElementById('progressFill').style.width = pct + '%';
+  document.getElementById('progressText').textContent = (currentStep - 1) + ' / ' + TOTAL_STEPS;
+  document.getElementById('stepLabel').textContent = 'STEP ' + currentStep;
+
+  // Back button
+  document.getElementById('backBtn').style.display = currentStep > 1 ? 'flex' : 'none';
+
+  // Next button state
+  const btn = document.getElementById('nextBtn');
+  const q = document.querySelector(`.survey-question[data-step="${currentStep}"]`);
+  if (q) {
+    const grid = q.querySelector('.option-grid');
+    const name = grid?.dataset.name;
+    if (currentStep === 4) {
+      // Multi-select
+      btn.disabled = !answers[name] || answers[name].length === 0;
+    } else {
+      btn.disabled = !answers[name];
+    }
+  }
+
+  // Last step button text
+  btn.textContent = currentStep === TOTAL_STEPS ? '診断を完了する 🎉' : '次へ →';
+
+  // Scroll body to top
+  document.getElementById('surveyBody').scrollTop = 0;
+}
+
+function showComplete() {
+  // Hide all questions
+  document.querySelectorAll('.survey-question').forEach(q => q.classList.remove('active'));
+  // Hide footer
+  document.getElementById('surveyFooter').style.display = 'none';
+  // Update progress
+  document.getElementById('progressFill').style.width = '100%';
+  document.getElementById('progressText').textContent = '完了！';
+  document.getElementById('stepLabel').textContent = 'COMPLETE';
+
+  // Fill summary
+  document.getElementById('sumGrade').textContent = answers.grade || '—';
+  document.getElementById('sumTarget').textContent = answers.target || '—';
+  document.getElementById('sumDev').textContent = answers.deviation || '—';
+  const subs = answers.subjects || [];
+  document.getElementById('sumSubjects').textContent = Array.isArray(subs) ? subs.join('・') : subs || '—';
+
+  // Show complete screen
+  document.getElementById('completeScreen').classList.add('show');
+  document.getElementById('surveyBody').scrollTop = 0;
+
+  // Confetti!
+  launchConfetti();
+}
+
+function openLine() {
+  // TODO: LINE公式アカウントのURLに差し替え
+  window.open('https://line.me/R/ti/p/XXXXXXXXXX', '_blank');
+}
+
+/* ═══════════════════════════════════════
+   CONFETTI
+   ═══════════════════════════════════════ */
+function launchConfetti() {
+  const canvas = document.getElementById('confetti');
+  const ctx = canvas.getContext('2d');
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+  canvas.style.display = 'block';
+
+  const pieces = [];
+  const colors = ['#1a56db','#f59e0b','#10b981','#ef4444','#8b5cf6','#06b6d4','#fbbf24'];
+  const total = 120;
+
+  for (let i = 0; i < total; i++) {
+    pieces.push({
+      x: Math.random() * canvas.width,
+      y: -20 - Math.random() * 300,
+      w: 6 + Math.random() * 6,
+      h: 4 + Math.random() * 4,
+      color: colors[Math.floor(Math.random() * colors.length)],
+      vx: (Math.random() - 0.5) * 3,
+      vy: 2 + Math.random() * 4,
+      rot: Math.random() * 360,
+      rotV: (Math.random() - 0.5) * 10,
+      opacity: 1,
+    });
+  }
+
+  let frame = 0;
+  function draw() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    let alive = false;
+    pieces.forEach(p => {
+      if (p.opacity <= 0) return;
+      alive = true;
+      p.x += p.vx;
+      p.y += p.vy;
+      p.vy += 0.05;
+      p.rot += p.rotV;
+      if (frame > 60) p.opacity -= 0.01;
+
+      ctx.save();
+      ctx.translate(p.x, p.y);
+      ctx.rotate(p.rot * Math.PI / 180);
+      ctx.globalAlpha = Math.max(0, p.opacity);
+      ctx.fillStyle = p.color;
+      ctx.fillRect(-p.w / 2, -p.h / 2, p.w, p.h);
+      ctx.restore();
+    });
+    frame++;
+    if (alive) {
+      requestAnimationFrame(draw);
+    } else {
+      canvas.style.display = 'none';
+    }
+  }
+  draw();
+}
+</script>
+</body>
+</html>
