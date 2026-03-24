@@ -130,45 +130,54 @@ body{
 /* FV CTA */
 .fv-cta{
   text-align:center;
-  margin:20px 0 8px;
+  margin:20px 16px 8px;
   position:relative;z-index:1;
 }
-.fv-cta-split{
-  display:inline-flex;align-items:stretch;
-  border-radius:14px;overflow:hidden;
-  border:none;cursor:pointer;font-family:inherit;
-  box-shadow:0 6px 25px rgba(0,0,0,0.15);
-  transition:all 0.2s;
-  animation:fvPulse 2s ease-in-out infinite;
-  position:relative;padding:0;
+.fv-cta-wrap{
+  position:relative;display:inline-block;width:100%;max-width:360px;
+  cursor:pointer;transition:all 0.2s;
 }
-.fv-cta-split:hover{transform:translateY(-2px);box-shadow:0 10px 35px rgba(0,0,0,0.2);}
-.fv-cta-split::after{
+.fv-cta-wrap:hover{transform:translateY(-2px);}
+.fv-cta-wrap:active{transform:scale(0.98);}
+.fv-cta-ribbon{
+  position:absolute;top:-14px;left:50%;transform:translateX(-50%);
+  background:#ef4444;color:#fff;
+  font-size:14px;font-weight:900;
+  padding:5px 24px;border-radius:100px;
+  letter-spacing:2px;
+  box-shadow:0 3px 12px rgba(239,68,68,0.4);
+  z-index:2;white-space:nowrap;
+  animation:ribbonPop 2s ease-in-out infinite;
+}
+@keyframes ribbonPop{
+  0%,100%{transform:translateX(-50%) scale(1);}
+  50%{transform:translateX(-50%) scale(1.05);}
+}
+.fv-cta-mega{
+  width:100%;padding:26px 20px 18px;
+  background:linear-gradient(135deg,#f59e0b,#d97706);
+  border-radius:16px;
+  box-shadow:0 8px 30px rgba(245,158,11,0.4);
+  margin-top:8px;
+  position:relative;overflow:hidden;
+}
+.fv-cta-mega::after{
   content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;
   background:linear-gradient(90deg,transparent,rgba(255,255,255,0.2),transparent);
   animation:shine 3s infinite;
 }
-@keyframes fvPulse{
-  0%,100%{box-shadow:0 6px 25px rgba(0,0,0,0.15);}
-  50%{box-shadow:0 6px 35px rgba(0,0,0,0.25);}
+.fv-cta-mega-text{
+  font-size:20px;font-weight:900;color:#fff;
+  display:flex;align-items:center;justify-content:center;gap:8px;
 }
-.fv-cta-free{
-  background:#ef4444;color:#fff;
-  padding:16px 20px;font-size:20px;font-weight:900;
-  display:flex;align-items:center;
-  letter-spacing:2px;
-}
-.fv-cta-main{
-  background:linear-gradient(135deg,#f59e0b,#d97706);color:#fff;
-  padding:16px 24px;font-size:15px;font-weight:900;
-  display:flex;align-items:center;gap:6px;
-  white-space:nowrap;
+.fv-cta-mega-sub{
+  font-size:11px;color:rgba(255,255,255,0.7);
+  margin-top:6px;
 }
 .fv-cta-arrow{
-  font-size:18px;
-  transition:transform 0.2s;
+  font-size:22px;transition:transform 0.2s;
 }
-.fv-cta-split:hover .fv-cta-arrow{transform:translateX(3px);}
+.fv-cta-wrap:hover .fv-cta-arrow{transform:translateX(4px);}
 .fv-cta-sub{
   font-size:11px;color:#94a3b8;
   font-weight:600;margin-top:8px;
@@ -278,18 +287,6 @@ body{
 .bridge-step-label{font-size:10px;font-weight:700;color:#64748b;line-height:1.3;text-align:center;}
 .bridge-arrow{color:#93c5fd;font-size:20px;margin-top:-20px;font-weight:700;}
 
-.start-btn{
-  display:inline-flex;align-items:center;gap:8px;
-  padding:18px 48px;font-size:18px;font-weight:900;
-  color:#fff;background:linear-gradient(135deg,#1a56db,#2563eb);
-  border:none;border-radius:100px;cursor:pointer;
-  box-shadow:0 6px 25px rgba(26,86,219,0.35);
-  transition:all 0.2s;font-family:inherit;
-  animation:btnPulse 2s ease-in-out infinite;
-}
-.start-btn:hover{transform:translateY(-2px);box-shadow:0 10px 35px rgba(26,86,219,0.45);}
-@keyframes btnPulse{0%,100%{box-shadow:0 6px 25px rgba(26,86,219,0.35);}50%{box-shadow:0 6px 35px rgba(26,86,219,0.55);}}
-
 /* Bridge Benefits */
 .bridge-benefits{
   background:#fff;border-radius:16px;
@@ -358,11 +355,6 @@ body{
 .preview-hint{
   text-align:center;font-size:11px;color:#94a3b8;
   font-weight:600;margin-top:4px;
-}
-.start-btn::after{
-  content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;
-  background:linear-gradient(90deg,transparent,rgba(255,255,255,0.25),transparent);
-  animation:shine 3s infinite;
 }
 @keyframes shine{0%{left:-100%;}30%{left:100%;}100%{left:100%;}}
 
@@ -779,8 +771,8 @@ body{
   .impact-top::before,.impact-top::after{width:16px;}
   .impact-bottom{font-size:56px;}
   .impact-bottom-sub{font-size:32px;}
-  .fv-cta-free{font-size:18px;padding:14px 16px;}
-  .fv-cta-main{font-size:13px;padding:14px 18px;}
+  .fv-cta-mega-text{font-size:17px;}
+  .fv-cta-ribbon{font-size:13px;padding:4px 20px;}
   .omakase-main{font-size:32px;}
   .bridge-heading{font-size:18px;}
   /* Survey adjustments */
@@ -852,10 +844,13 @@ body{
 
   <!-- FV CTA -->
   <div class="fv-cta">
-    <button class="fv-cta-split" onclick="openSurvey()">
-      <span class="fv-cta-free">無料</span>
-      <span class="fv-cta-main">うちの子の戦略を見てみる<span class="fv-cta-arrow">→</span></span>
-    </button>
+    <div class="fv-cta-wrap" onclick="openSurvey()">
+      <div class="fv-cta-ribbon">＼ 完全無料 ／</div>
+      <div class="fv-cta-mega">
+        <div class="fv-cta-mega-text">うちの子の戦略を見てみる <span class="fv-cta-arrow">→</span></div>
+        <div class="fv-cta-mega-sub">たった30秒で診断完了</div>
+      </div>
+    </div>
     <div class="fv-cta-sub">無理な勧誘一切なし</div>
     <div class="fv-cta-micro"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="12" rx="2" stroke="#64748b" stroke-width="2"/><path d="M7 20h10" stroke="#64748b" stroke-width="2" stroke-linecap="round"/><path d="M12 16v4" stroke="#64748b" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="10" r="2" fill="#1a56db"/><path d="M8 14c0-2 2-3 4-3s4 1 4 3" stroke="#1a56db" stroke-width="1.5" stroke-linecap="round"/></svg><span>場所を選ばず、最高峰の学習環境を。<br>全国どこからでも診断・入塾OK</span></div>
   </div>
@@ -1026,10 +1021,13 @@ body{
     <div class="preview-hint">← スワイプで全8ページを見る →</div>
   </div>
 
-  <button class="fv-cta-split" onclick="openSurvey()" style="margin:0 auto;">
-    <span class="fv-cta-free">無料</span>
-    <span class="fv-cta-main">うちの子の戦略を見てみる<span class="fv-cta-arrow">→</span></span>
-  </button>
+  <div class="fv-cta-wrap" onclick="openSurvey()" style="max-width:360px;margin:0 auto;">
+    <div class="fv-cta-ribbon">＼ 完全無料 ／</div>
+    <div class="fv-cta-mega">
+      <div class="fv-cta-mega-text">うちの子の戦略を見てみる <span class="fv-cta-arrow">→</span></div>
+      <div class="fv-cta-mega-sub">たった30秒で診断完了</div>
+    </div>
+  </div>
 </div>
 
 </div><!-- /phone-inner -->
